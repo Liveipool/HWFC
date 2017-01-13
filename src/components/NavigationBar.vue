@@ -9,16 +9,10 @@
           <router-link class="navbar-brand" to="/">{{ brand }}</router-link>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" @click="changeLinkBgColor">
+      <ul class="nav navbar-nav navbar-right">
         <!-- 使用active来高亮选择的链接 -->
-        <li>
-          <router-link to="/home">首页</router-link>
-        </li>
-        <li>
-          <router-link to="/introduction">球队介绍</router-link>
-        </li>
-        <li>
-          <router-link to="/members">球队成员</router-link>
+        <li v-for="nav in navs" :class="{ active: $route.path == nav.url }">
+          <router-link :to="nav.url"> {{nav.description}} </router-link>
         </li>
       </ul>
     </div>
@@ -30,27 +24,24 @@ export default {
   name: 'navbar',
   data () {
     return {
-      brand: 'HWFC'
+      brand: 'HWFC',
+      navs: [{
+        url: '/home',
+        description: '首页'
+      }, {
+        url: '/introduction',
+        description: '球队介绍'
+      }, {
+        url: '/members',
+        description: '球队成员'
+      }]
     }
   },
   mounted () {
-    // 改变初始的被激活链接元素
-    let initActivedItem = document.querySelector('.router-link-active:not(.navbar-brand)').parentNode
-    initActivedItem.classList.add('active')
   },
   computed: {
-    // 保存所有的链接元素
-    items: () => document.querySelectorAll('ul.navbar-right > li')
   },
   methods: {
-    // 改变被激活的链接元素样式
-    changeLinkBgColor (event) {
-      let activedItem = event.target.parentNode
-      activedItem.classList.add('active')
-      this.items.forEach((item) => {
-        if (item !== activedItem) item.classList.remove('active')
-      })
-    }
   }
 }
 </script>
