@@ -34,6 +34,9 @@ export default {
       }, {
         url: '/members',
         description: '球队成员'
+      }, {
+        url: '/records',
+        description: '战绩记录'
       }]
     }
   },
@@ -51,21 +54,31 @@ export default {
 /* navigation-bar style setting*/
 /* variables */
 /* navigation-bar color */
-$top-color: #086ed5;
-$bottom-color: #055db5;
+$hwfc-blue: #39F;
 $active-bg-color: #044e97;
 $active-font-color: #fff;
 $height: 50px;
 #navigation {
-  background: -webkit-linear-gradient(top, $top-color, $bottom-color);
-  background: linear-gradient(to bottom, $top-color, $bottom-color);
+  // 以后再比较是否渐进会更好看
+  // background: -webkit-linear-gradient(top, $top-color, $bottom-color);
+  // background: linear-gradient(to bottom, $top-color, $bottom-color);
+  background-color: $hwfc-blue;
   border: 0;
-  border-bottom: 1px solid $active-bg-color;
-  box-shadow: 0 1px 2px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.15);
+  // border-bottom: 1px solid $active-bg-color;
+  // box-shadow: 0 1px 2px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.15);
+}
+.container  {
+  margin: 0;
+  padding-right: 250px;
+  width: 100%;
 }
 #navigation .navbar-brand {
   color: $active-font-color;
 }
+#navigation .navbar-right > li > a {
+  color: #dcdcdc;
+}
+
 #navigation .navbar-nav > .active > a,
 #navigation .navbar-nav > .active > a:hover,
 #navigation .navbar-nav > .active > a:focus {

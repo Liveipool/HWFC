@@ -1,6 +1,7 @@
 import Home from '../pages/Home'
-import Members from '../pages/Members'
 import Introduction from '../pages/Introduction'
+import Members from '../pages/Members'
+import Records from '../pages/Records'
 export default {
   // html5 mode (without # in url)
   mode: 'history',
@@ -13,12 +14,16 @@ export default {
     path: '/home',
     component: Home
   }, {
+  // 球队介绍
+    path: '/introduction',
+    component: Introduction
+  }, {
   // 球队成员主页
     path: '/members',
     component: Members
   }, {
-  // 球队介绍
-    path: '/introduction',
-    component: Introduction
+  // 战绩记录
+    path: '/records',
+    component: Records
   }]
 }

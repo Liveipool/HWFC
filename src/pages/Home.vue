@@ -1,7 +1,7 @@
 <template>
   <div class="jumbotron no-radius">
     <p>HWFC主页</p>
-    <img src="../assets/logo.png">
+    <img src="../assets/cup.jpg">
   </div>
 </template>
 
@@ -11,5 +11,9 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+img {
+	width: 700px;
+	height: 380px;
+}
 </style>

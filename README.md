@@ -24,4 +24,7 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).    
+
+## Documents    
+[项目需求文档](http://liveipool.com/blog/2017/02/16/HWFC-Requirements-Documentation/)    
